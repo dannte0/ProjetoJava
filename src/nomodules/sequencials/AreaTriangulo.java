@@ -1,4 +1,4 @@
-package nomodules.sequencial;
+package nomodules.sequencials;
 
 import java.util.Scanner;
 
