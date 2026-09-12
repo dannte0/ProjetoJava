@@ -1,4 +1,4 @@
-package nomodules.sequencials;
+package nomodules.sequentials;
 
 import java.util.Scanner;
 
@@ -22,7 +22,7 @@ public class SalarioLiquido
 		System.out.println("Digite o número de dependentes:");
 		dependentes = in.nextInt();
 		salario_bruto = horas_trabalhadas * valor_hora;
-		salario_liquido = salario_bruto - (salario_bruto * desconto/100) + dependentes;
+		salario_liquido = salario_bruto - (salario_bruto * desconto/100) + dependentes * 100;
 	
 		System.out.printf("O salário líquido é: R$ %.2f", salario_liquido);
 		in.close();
