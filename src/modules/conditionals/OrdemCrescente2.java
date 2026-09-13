@@ -1,4 +1,4 @@
-package nomodules.conditionals;
+package modules.conditionals;
 import java.util.Scanner;
 
 public class OrdemCrescente2 
@@ -16,27 +16,31 @@ public class OrdemCrescente2
 		c = in.nextInt();
 		System.out.println("Digite o quarto valor:");
 		d = in.nextInt();
+		organizaNumeros(a, b, c, d);
 		
-		if(d > c)
+		in.close();
+	}
+	public static void organizaNumeros(int n1, int n2, int n3, int x)
+	{
+		if(x > n3)
 		{
-			System.out.printf("Em ordem crescente: %d, %d, %d, %d", a, b, c, d);
+			System.out.printf("Em ordem crescente: %d, %d, %d, %d", n1, n2, n3, x);
 		}
-		else if(d < a)
+		else if(x < n1)
 		{
-			System.out.printf("Em ordem crescente: %d, %d, %d, %d", d, a, b, c);
+			System.out.printf("Em ordem crescente: %d, %d, %d, %d", x, n1, n2, n3);
 		}
-		else if(d > a && d < b)
+		else if(x > n1 && x < n2)
 		{			
-			System.out.printf("Em ordem crescente: %d, %d, %d, %d", a, d, b, c);
+			System.out.printf("Em ordem crescente: %d, %d, %d, %d", n1, x, n2, n3);
 		}
-		else if(d > b && d < c)
+		else if(x > n2 && x < n3)
 		{			
-			System.out.printf("Em ordem crescente: %d, %d, %d, %d", a, b, d, c);
+			System.out.printf("Em ordem crescente: %d, %d, %d, %d", n1, n2, x, n3);
 		}
 		else
 		{
 			System.out.println("Igual a um dos valores");
 		}
-		in.close();
 	}
 }
